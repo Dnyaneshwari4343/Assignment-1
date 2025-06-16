@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Submission Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    form {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    .form-section {
+      margin-bottom: 20px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<form action="submit_resume.php" method="POST" enctype="multipart/form-data">
+  <h2>Resume Submission Form</h2>
+
+  <div class="form-section">
+    <label for="fieldName">Field Name</label>
+    <input type="text" id="fieldName" name="fieldName" required>
+
+    <label for="fullName">Full Name</label>
+    <input type="text" id="fullName" name="fullName" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+    <label for="dob">Date of Birth</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label>Gender</label>
+    <select name="gender" required>
+      <option value="">--Select--</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label>Marital Status</label>
+    <select name="maritalStatus" required>
+      <option value="">--Select--</option>
+      <option value="Single">Single</option>
+      <option value="Married">Married</option>
+      <option value="Divorced">Divorced</option>
+      <option value="Widowed">Widowed</option>
+    </select>
+
+    <label for="nationality">Nationality</label>
+    <input type="text" id="nationality" name="nationality" required>
+
+    <label for="address">Address</label>
+    <textarea id="address" name="address" rows="3" required></textarea>
+
+    <label for="linkedin">LinkedIn Profile URL</label>
+    <input type="url" id="linkedin" name="linkedin">
+
+    <label for="github">GitHub Profile URL</label>
+    <input type="url" id="github" name="github">
+
+    <label for="photo">Upload Profile Photo</label>
+    <input type="file" id="photo" name="photo" accept="image/*" required>
+
+    <label for="resume">Upload Resume (PDF only)</label>
+    <input type="file" id="resume" name="resume" accept=".pdf" required>
+
+    <label for="objective">Career Objective</label>
+    <textarea id="objective" name="objective" rows="4" required></textarea>
+
+    <label for="qualification">Highest Qualification</label>
+    <input type="text" id="qualification" name="qualification" required>
+
+    <label for="college">Name of College / University</label>
+    <input type="text" id="college" name="college" required>
+
+    <label for="graduationYear">Year of Graduation</label>
+    <input type="number" id="graduationYear" name="graduationYear" min="1900" max="2100" required>
+
+    <label for="skills">Technical Skills (HTML, CSS, JS, etc.)</label>
+    <textarea id="skills" name="skills" rows="3" required></textarea>
+
+    <label for="languages">Programming Languages Known</label>
+    <textarea id="languages" name="languages" rows="3" required></textarea>
+
+    <label for="certifications">Certifications (if any)</label>
+    <textarea id="certifications" name="certifications" rows="2"></textarea>
+
+    <label for="experience">Work Experience (Years)</label>
+    <input type="number" id="experience" name="experience" min="0" required>
+
+    <label for="lastCompany">Last Company Worked At</label>
+    <input type="text" id="lastCompany" name="lastCompany">
+
+    <label for="designation">Your Job Role / Designation</label>
+    <input type="text" id="designation" name="designation">
+
+    <label for="knownLanguages">Languages Known</label>
+    <textarea id="knownLanguages" name="knownLanguages" rows="2" required></textarea>
+
+    <label for="hobbies">Hobbies</label>
+    <textarea id="hobbies" name="hobbies" rows="2" required></textarea>
+
+    <label>
+      <input type="checkbox" name="declaration" required>
+      I hereby declare that the information provided is true and correct to the best of my knowledge.
+    </label>
+  </div>
+
+  <button type="submit">Submit Resume</button>
+</form>
+
+</body>
+</html>
